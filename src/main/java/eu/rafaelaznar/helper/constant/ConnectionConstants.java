@@ -35,7 +35,7 @@ package eu.rafaelaznar.helper.constant;
 public class ConnectionConstants {
 
     public static final String connectionName = "hikari";
-    public static final String databaseName = "gesane";
+    public static final String databaseName = "gesticom";
     public static final String databaseLogin = "root";
     public static final String databasePassword = "bitnami";
     public static final String databasePort = "3306";

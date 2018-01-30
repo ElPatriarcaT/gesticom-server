@@ -33,30 +33,8 @@
 package eu.rafaelaznar.factory;
 
 import eu.rafaelaznar.bean.helper.MetaBeanHelper;
-import eu.rafaelaznar.bean.specificimplementation.TipousuarioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.UsuarioSpecificBeanImplementation;
 import eu.rafaelaznar.bean.publicinterface.GenericBeanInterface;
-import eu.rafaelaznar.bean.specificimplementation.CategoriaprofesionalSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.CentroSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.CentrosanitarioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.TipoepisodioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.CircunstanciasaltaSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.CursoSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.DependenciaSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.EspecialidadSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.DestinoaltaSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.EpisodioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.FacturaSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.GrupoSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.MedicoSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.ModalidadepisodioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.PacienteSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.PacienteVisitanteSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.ServicioSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.TipopagoSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.SexoSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.TipodependenciaSpecificBeanImplementation;
-import eu.rafaelaznar.bean.specificimplementation.TiposervicioSpecificBeanImplementation;
+import eu.rafaelaznar.bean.specificimplementation.*;
 
 public class BeanFactory {
 
@@ -65,78 +43,33 @@ public class BeanFactory {
         MetaBeanHelper oPuserSecurity = oPuserBean_security;
         switch (ob) {
             case "usuario":
-                oBean = new UsuarioSpecificBeanImplementation();
+                oBean = new Usuario();
                 break;
             case "tipousuario":
-                oBean = new TipousuarioSpecificBeanImplementation();
+                oBean = new Tipousuario();
                 break;
-            case "grupo":
-                oBean = new GrupoSpecificBeanImplementation();
+            case "censo":
+                oBean = new Censo();
                 break;
-            case "curso":
-                oBean = new CursoSpecificBeanImplementation();
+            case "cargo":
+                oBean = new Cargo();
                 break;
-            case "centrosanitario":
-                oBean = new CentrosanitarioSpecificBeanImplementation();
+            case "comision":
+                oBean = new Comision();
                 break;
-            case "centro":
-                oBean = new CentroSpecificBeanImplementation();
+            case "cuotas":
+                oBean = new Cuotas();
                 break;
-            case "circunstanciasalta":
-                oBean = new CircunstanciasaltaSpecificBeanImplementation();
+            case "ejercicio":
+                oBean = new Ejercicio();
                 break;
-            case "especialidad":
-                oBean = new EspecialidadSpecificBeanImplementation();
+            case "eventos":
+                oBean = new Eventos();
                 break;
-            case "destinoalta":
-                oBean = new DestinoaltaSpecificBeanImplementation();
-                break;
-            case "tipopago":
-                oBean = new TipopagoSpecificBeanImplementation();
-                break;
-            case "sexo":
-                oBean = new SexoSpecificBeanImplementation();
-                break;
-            case "tipoepisodio":
-                oBean = new TipoepisodioSpecificBeanImplementation();
-                break;
-            case "tiposervicio":
-                oBean = new TiposervicioSpecificBeanImplementation();
-                break;
-            case "modalidadepisodio":
-                oBean = new ModalidadepisodioSpecificBeanImplementation();
-                break;
-            case "tipodependencia":
-                oBean = new TipodependenciaSpecificBeanImplementation();
-                break;
-            case "factura":
-                oBean = new FacturaSpecificBeanImplementation();
-                break;
-            case "servicio":
-                oBean = new ServicioSpecificBeanImplementation();
-                break;
-            case "paciente":
-                UsuarioSpecificBeanImplementation oUser = (UsuarioSpecificBeanImplementation) oPuserSecurity.getBean();
-                if (oUser.getId_tipousuario() == 5) {
-                    oBean = new PacienteVisitanteSpecificBeanImplementation();
-                } else {
-                    oBean = new PacienteSpecificBeanImplementation();
-                }
-                break;
-            case "categoriaprofesional":
-                oBean = new CategoriaprofesionalSpecificBeanImplementation();
-                break;
-            case "episodio":
-                oBean = new EpisodioSpecificBeanImplementation();
-                break;
-            case "medico":
-                oBean = new MedicoSpecificBeanImplementation();
-                break;
-            case "dependencia":
-                oBean = new DependenciaSpecificBeanImplementation();
+            case "recompensa":
+                oBean = new Recompensa();
                 break;
             default:
-
                 //  oReplyBean = new ReplyBean(500, "Object not found : Please contact your administrator");
                 break;
         }

@@ -33,7 +33,7 @@
 package eu.rafaelaznar.dao.specificimplementation;
 
 import eu.rafaelaznar.bean.helper.MetaBeanHelper;
-import eu.rafaelaznar.bean.specificimplementation.UsuarioSpecificBeanImplementation;
+import eu.rafaelaznar.bean.specificimplementation.Usuario;
 import eu.rafaelaznar.dao.genericimplementation.TableGenericDaoImplementation;
 import eu.rafaelaznar.helper.Log4jHelper;
 import java.sql.Connection;
@@ -48,7 +48,7 @@ public class UsuarioSpecificDaoImplementation extends TableGenericDaoImplementat
         super("usuario", oPooledConnection, oPuserBean_security, strWhere);
     }
 
-    public MetaBeanHelper getFromLoginAndPass(UsuarioSpecificBeanImplementation oUsuarioBean) throws Exception {
+    public MetaBeanHelper getFromLoginAndPass(Usuario oUsuarioBean) throws Exception {
         PreparedStatement oPreparedStatement = null;
         ResultSet oResultSet = null;
         MetaBeanHelper oMetaBeanHelper = null;

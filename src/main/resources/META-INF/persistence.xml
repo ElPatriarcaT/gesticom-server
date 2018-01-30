@@ -4,6 +4,16 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>eu.rafaelaznar.bean.specificimplementation.EspecialidadSpecificBeanImplementation</class>
     <class>eu.rafaelaznar.bean.specificimplementation.Paciente</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Usuario</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Recompensa</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Cargo</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Tipousuario</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Censo</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Eventos</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Ejercicio</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Comision</class>
+    <class>eu.rafaelaznar.bean.specificimplementation.Cuotas</class>
+    <class>eu.rafaelaznar.dao.specificimplementation.CargoSpecificDaoImplementation</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gesane?zeroDateTimeBehavior=convertToNull"/>
