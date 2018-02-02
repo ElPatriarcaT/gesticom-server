@@ -197,7 +197,7 @@ public class UsuarioSpecificServiceImplementation extends TableGenericServiceImp
         if (oUserBean == null) {
             oReplyBean = new ReplyBeanHelper(401, EncodingHelper.quotate("Unauthorized"));
         } else {
-            oReplyBean = new ReplyBeanHelper(200, EncodingHelper.quotate(((Usuario) oUserBean.getBean()).getIdTipousuario().toString()));
+            oReplyBean = new ReplyBeanHelper(200, EncodingHelper.quotate(((Usuario) oUserBean.getBean()).getId_tipousuario().toString()));
         }
         return oReplyBean;
     }

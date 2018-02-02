@@ -47,7 +47,6 @@ public class ServiceFactory {
             case "usuario":
                 UsuarioSpecificServiceImplementation oUsuarioService = new UsuarioSpecificServiceImplementation(oRequest);
                 switch (op) {
-
                     case "getallobjectsmetadata":
                         oReplyBean = oUsuarioService.getallobjectsmetadata();
                         break;
@@ -168,6 +167,44 @@ public class ServiceFactory {
                         break;
                     case "getpagex":
                         oReplyBean = oCargoService.getPageX();
+                        break;
+                    default:
+                        oReplyBean = new ReplyBeanHelper(500, EncodingHelper.quotate("Operation not found : Please contact your administrator"));
+                        break;
+                }
+                break;
+                case "censo":
+                CensoSpecificServiceImplementation oCensoService = new CensoSpecificServiceImplementation(oRequest);
+                switch (op) {
+                    case "getmetadata":
+                        oReplyBean = oCensoService.getMetaData();
+                        break;
+                    case "getobjectmetadata":
+                        oReplyBean = oCensoService.getObjectMetaData();
+                        break;
+                    case "getpropertiesmetadata":
+                        oReplyBean = oCensoService.getPropertiesMetaData();
+                        break;
+                    case "get":
+                        oReplyBean = oCensoService.get();
+                        break;
+                    case "set":
+                        oReplyBean = oCensoService.set();
+                        break;
+                    case "remove":
+                        oReplyBean = oCensoService.remove();
+                        break;
+                    case "getpage":
+                        oReplyBean = oCensoService.getPage();
+                        break;
+                    case "getcount":
+                        oReplyBean = oCensoService.getCount();
+                        break;
+                    case "getcountx":
+                        oReplyBean = oCensoService.getCountX();
+                        break;
+                    case "getpagex":
+                        oReplyBean = oCensoService.getPageX();
                         break;
                     default:
                         oReplyBean = new ReplyBeanHelper(500, EncodingHelper.quotate("Operation not found : Please contact your administrator"));

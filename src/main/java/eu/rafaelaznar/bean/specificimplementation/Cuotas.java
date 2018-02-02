@@ -13,75 +13,66 @@ import eu.rafaelaznar.bean.genericimplementation.TableGenericBeanImplementation;
  */
 public class Cuotas extends TableGenericBeanImplementation {
 
-    private Integer id;
-    private Double cantidadPt;
-    private Double cantidadSt;
-    private Double cantidadTt;
-    private Double cantidadCt;
-    private Censo idCenso;
-    private Ejercicio idEjercicio;
+    private Double cantidad_pt;
+    private Double cantidad_st;
+    private Double cantidad_tt;
+    private Double cantidad_ct;
+    private Censo id_censo;
+    private Ejercicio id_ejercicio;
 
     public Cuotas() {
     }
 
-    public Cuotas(Integer id) {
-        this.id = id;
+    public Double getCantidad_pt() {
+        return cantidad_pt;
     }
 
-    public Integer getId() {
-        return id;
+    public void setCantidad_pt(Double cantidad_pt) {
+        this.cantidad_pt = cantidad_pt;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Double getCantidad_st() {
+        return cantidad_st;
     }
 
-    public Double getCantidadPt() {
-        return cantidadPt;
+    public void setCantidad_st(Double cantidad_st) {
+        this.cantidad_st = cantidad_st;
     }
 
-    public void setCantidadPt(Double cantidadPt) {
-        this.cantidadPt = cantidadPt;
+    public Double getCantidad_tt() {
+        return cantidad_tt;
     }
 
-    public Double getCantidadSt() {
-        return cantidadSt;
+    public void setCantidad_tt(Double cantidad_tt) {
+        this.cantidad_tt = cantidad_tt;
     }
 
-    public void setCantidadSt(Double cantidadSt) {
-        this.cantidadSt = cantidadSt;
+    public Double getCantidad_ct() {
+        return cantidad_ct;
     }
 
-    public Double getCantidadTt() {
-        return cantidadTt;
+    public void setCantidad_ct(Double cantidad_ct) {
+        this.cantidad_ct = cantidad_ct;
     }
 
-    public void setCantidadTt(Double cantidadTt) {
-        this.cantidadTt = cantidadTt;
+    
+
+    public Censo getId_censo() {
+        return id_censo;
     }
 
-    public Double getCantidadCt() {
-        return cantidadCt;
+    public void setId_censo(Censo id_censo) {
+        this.id_censo = id_censo;
     }
 
-    public void setCantidadCt(Double cantidadCt) {
-        this.cantidadCt = cantidadCt;
+    public Ejercicio getId_ejercicio() {
+        return id_ejercicio;
     }
 
-    public Censo getIdCenso() {
-        return idCenso;
+    public void setId_ejercicio(Ejercicio id_ejercicio) {
+        this.id_ejercicio = id_ejercicio;
     }
 
-    public void setIdCenso(Censo idCenso) {
-        this.idCenso = idCenso;
-    }
-
-    public Ejercicio getIdEjercicio() {
-        return idEjercicio;
-    }
-
-    public void setIdEjercicio(Ejercicio idEjercicio) {
-        this.idEjercicio = idEjercicio;
-    }
+    
     
 }

@@ -5,33 +5,65 @@
  */
 package eu.rafaelaznar.bean.specificimplementation;
 
+import com.google.gson.annotations.Expose;
 import eu.rafaelaznar.bean.genericimplementation.TableGenericBeanImplementation;
+import eu.rafaelaznar.bean.meta.publicinterface.MetaObjectBeanInterface;
+import eu.rafaelaznar.bean.meta.publicinterface.MetaPropertyBeanInterface;
+import eu.rafaelaznar.helper.EnumHelper;
 import java.util.Date;
 
 /**
  *
  * @author a023319520g
  */
+@MetaObjectBeanInterface(
+        TableName = "eventos",
+        SingularDescription = "Eventos",
+        PluralDescription = "Eventos de la Asociación",
+        Icon = "fa fa-",
+        Type = EnumHelper.SourceType.Table
+)
 public class Eventos extends TableGenericBeanImplementation {
 
-    private Integer id;
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Desc.",
+            LongName = "Descripcion del Evento",
+            Description = "Descripcion del Evento",
+            Type = EnumHelper.FieldType.String,
+            IsRequired = true,
+            IsForeignKeyDescriptor = false,
+            Width = 3,
+            MaxLength = 100
+    )
     private String descripcion;
+    
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Fecha",
+            LongName = "Fecha del Ev.",
+            Description = "Fecha del Evento",
+            Type = EnumHelper.FieldType.Date,
+            RegexHelp = "una fecha correcta",
+            IsRequired = true,
+            IsVisible = false
+    )
     private Date fecha;
+    
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Tit.",
+            LongName = "Titulo del Evento",
+            Description = "Titulo del Evento",
+            Type = EnumHelper.FieldType.String,
+            IsRequired = true,
+            IsForeignKeyDescriptor = false,
+            Width = 3,
+            MaxLength = 100
+    )
     private String titulo;
 
     public Eventos() {
-    }
-
-    public Eventos(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getDescripcion() {

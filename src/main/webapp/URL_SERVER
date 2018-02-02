@@ -1,0 +1,9 @@
+Login Administrador
+
+http://localhost:8081/gesane/json?ob=usuario&op=login&user=tonibs&pass=d784595be5d0aaea3da4e1d3981899a2216ad52b3
+
+Ver los datos de una tabla (usuario) del primer registro (id = 1)
+
+http://localhost:8081/gesane/json?ob=usuario&op=get&id=1
+
+
