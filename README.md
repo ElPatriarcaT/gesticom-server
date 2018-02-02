@@ -1,2 +1,2 @@
-# gesane-server
-gesane-server 2017-2018
+# gesticom-server
+gesticom-server 2017-2018

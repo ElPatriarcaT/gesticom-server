@@ -155,56 +155,56 @@ public class Censo extends TableGenericBeanImplementation {
     )
     private String año_recompensa;
 
-//    @Expose(serialize = false)
-//    @MetaPropertyBeanInterface(
-//            Type = EnumHelper.FieldType.ForeignId
-//    )
-    private Cargo id_cargo;
-//     @Expose
-//    @MetaPropertyBeanInterface(
-//            ShortName = "Car.",
-//            LongName = "Cargo",
-//            Description = "Datos de la Cargo",
-//            Type = EnumHelper.FieldType.ForeignObject,
-//            IsRequired = true,
-//            References = "cargo",
-//            Width = 4
-//    )
-//    private MetaBeanHelper obj_cargo = null;
+    @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            Type = EnumHelper.FieldType.ForeignId
+    )
+    private Integer id_cargo;
+     @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Car.",
+            LongName = "Cargo",
+            Description = "Datos de la Cargo",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "cargo",
+            Width = 4
+    )
+    private MetaBeanHelper obj_cargo = null;
     
-//    @Expose(serialize = false)
-//    @MetaPropertyBeanInterface(
-//            Type = EnumHelper.FieldType.ForeignId
-//    )
-    private Recompensa id_recompensa;
-//     @Expose
-//    @MetaPropertyBeanInterface(
-//            ShortName = "Rec.",
-//            LongName = "Recompensa",
-//            Description = "Datos de las Recompensas",
-//            Type = EnumHelper.FieldType.ForeignObject,
-//            IsRequired = true,
-//            References = "recompensa",
-//            Width = 4
-//    )
-//    private MetaBeanHelper obj_recompesa = null;
+    @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            Type = EnumHelper.FieldType.ForeignId
+    )
+    private Integer id_recompensa;
+     @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Rec.",
+            LongName = "Recompensa",
+            Description = "Datos de las Recompensas",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "recompensa",
+            Width = 4
+    )
+    private MetaBeanHelper obj_recompesa = null;
     
-//    @Expose(serialize = false)
-//    @MetaPropertyBeanInterface(
-//            Type = EnumHelper.FieldType.ForeignId
-//    )
-    private Usuario id_usuario;
-//     @Expose
-//    @MetaPropertyBeanInterface(
-//            ShortName = "Usu.",
-//            LongName = "Usuario",
-//            Description = "Datos del Usuario",
-//            Type = EnumHelper.FieldType.ForeignObject,
-//            IsRequired = true,
-//            References = "usuario",
-//            Width = 4
-//    )
-//    private MetaBeanHelper obj_usuario = null;
+    @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            Type = EnumHelper.FieldType.ForeignId
+    )
+    private Integer id_usuario;
+     @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Usu.",
+            LongName = "Usuario",
+            Description = "Datos del Usuario",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "usuario",
+            Width = 4
+    )
+    private MetaBeanHelper obj_usuario = null;
 
     public Censo() {
     }
@@ -305,27 +305,53 @@ public class Censo extends TableGenericBeanImplementation {
         this.año_recompensa = año_recompensa;
     }
 
-    public Cargo getId_cargo() {
+    public Integer getId_cargo() {
         return id_cargo;
     }
 
-    public void setId_cargo(Cargo id_cargo) {
+    public void setId_cargo(Integer id_cargo) {
         this.id_cargo = id_cargo;
     }
 
-    public Recompensa getId_recompensa() {
+    public MetaBeanHelper getObj_cargo() {
+        return obj_cargo;
+    }
+
+    public void setObj_cargo(MetaBeanHelper obj_cargo) {
+        this.obj_cargo = obj_cargo;
+    }
+
+    public Integer getId_recompensa() {
         return id_recompensa;
     }
 
-    public void setId_recompensa(Recompensa id_recompensa) {
+    public void setId_recompensa(Integer id_recompensa) {
         this.id_recompensa = id_recompensa;
     }
 
-    public Usuario getId_usuario() {
+    public MetaBeanHelper getObj_recompesa() {
+        return obj_recompesa;
+    }
+
+    public void setObj_recompesa(MetaBeanHelper obj_recompesa) {
+        this.obj_recompesa = obj_recompesa;
+    }
+
+    public Integer getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(Usuario id_usuario) {
+    public void setId_usuario(Integer id_usuario) {
         this.id_usuario = id_usuario;
     }
+
+    public MetaBeanHelper getObj_usuario() {
+        return obj_usuario;
+    }
+
+    public void setObj_usuario(MetaBeanHelper obj_usuario) {
+        this.obj_usuario = obj_usuario;
+    }
+
+    
 }
