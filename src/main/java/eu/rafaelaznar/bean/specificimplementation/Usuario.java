@@ -121,12 +121,4 @@ public class Usuario extends TableGenericBeanImplementation {
         this.id_tipousuario = id_tipousuario;
     }
 
-    public MetaBeanHelper getObj_tipousuario() {
-        return obj_tipousuario;
-    }
-
-    public void setObj_tipousuario(MetaBeanHelper obj_tipousuario) {
-        this.obj_tipousuario = obj_tipousuario;
-    }
-
 }
