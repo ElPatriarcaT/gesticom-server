@@ -39,10 +39,10 @@ public class ConfigurationConstants {
     public static final int jsonMsgDepth = 1;
     public static final int tokenSize = 20;
     public static final Environment environment = Environment.Debug;
-    public static final String version = "02.01";
-    public static final String versionDate = "December 2017";
-    public static final String author = "Rafael Aznar & 2017-2018 DAW STUDENTS";
-    public static final String authorMail = "rafaaznar{at}gmail{dot}com";
+    public static final String version = "1.0";
+    public static final String versionDate = "Febrero 2018";
+    public static final String author = "Antonio Belenguer Sanchez";
+    public static final String authorMail = "tbelenguersanchez@gmail.com";
     public static final String sources = "https://github.com/rafaelaznar/gesane-server";
     public static final String licenseLink = "<a href=\"https://opensource.org/licenses/MIT\">MIT License</a>";
     public static final int programDalay = 0;
