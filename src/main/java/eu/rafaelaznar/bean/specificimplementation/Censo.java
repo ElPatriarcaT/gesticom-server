@@ -34,7 +34,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Documento Nacional de Identidad",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String dni;
     
@@ -45,7 +46,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Nombre del usuario",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String nombre;
     
@@ -56,7 +58,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Primer Apellido del usuario",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String primer_apellido;
     
@@ -78,7 +81,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Domicilio del usuario",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String domicilio;
     
@@ -100,7 +104,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Código Postal del paciente",
             Type = EnumHelper.FieldType.Integer,
             Width = 3,
-            MaxLength = 5
+            MaxLength = 5,
+            IsVisible = true
     )
     private String cod_postal;
     
@@ -120,7 +125,8 @@ public class Censo extends TableGenericBeanImplementation {
             ShortName = "F.Na",
             LongName = "Fecha de nacimiento",
             Description = "Fecha de nacimiento del usuario",
-            Type = EnumHelper.FieldType.Date
+            Type = EnumHelper.FieldType.Date,
+            IsVisible = true
     )
     private Date fecha_nacimiento;
     
@@ -168,7 +174,8 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.ForeignObject,
             IsRequired = true,
             References = "cargo",
-            Width = 4
+            Width = 4,
+            IsVisible = true
     )
     private MetaBeanHelper obj_cargo = null;
     

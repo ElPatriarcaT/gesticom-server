@@ -34,7 +34,8 @@ public class Ejercicio extends TableGenericBeanImplementation {
             IsRequired = false,
             IsForeignKeyDescriptor = false,
             Width = 4,
-            MaxLength = 4
+            MaxLength = 4,
+            IsVisible = true
     )
     private String año_ejercicio;
 

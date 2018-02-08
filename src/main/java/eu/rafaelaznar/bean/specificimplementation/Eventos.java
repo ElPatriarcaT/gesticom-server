@@ -34,7 +34,8 @@ public class Eventos extends TableGenericBeanImplementation {
             IsRequired = true,
             IsForeignKeyDescriptor = false,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String descripcion;
     
@@ -46,7 +47,7 @@ public class Eventos extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.Date,
             RegexHelp = "una fecha correcta",
             IsRequired = true,
-            IsVisible = false
+            IsVisible = true
     )
     private Date fecha;
     
@@ -59,7 +60,8 @@ public class Eventos extends TableGenericBeanImplementation {
             IsRequired = true,
             IsForeignKeyDescriptor = false,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String titulo;
 

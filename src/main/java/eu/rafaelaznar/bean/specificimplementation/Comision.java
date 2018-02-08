@@ -37,7 +37,7 @@ public class Comision extends TableGenericBeanImplementation {
             IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100,
-            IsVisible = false
+            IsVisible = true
     )
     private String nombre;
     
@@ -53,7 +53,7 @@ public class Comision extends TableGenericBeanImplementation {
             IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100,
-            IsVisible = false
+            IsVisible = true
     )
     private String direccion;
     
@@ -67,7 +67,7 @@ public class Comision extends TableGenericBeanImplementation {
             IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 20,
-            IsVisible = false
+            IsVisible = true
     )
     private String telefono;
     
@@ -81,7 +81,7 @@ public class Comision extends TableGenericBeanImplementation {
             RegexPattern = RegexConstants.email,
             RegexHelp = RegexConstants.email_Help,
             MaxLength = 50,
-            IsVisible = false
+            IsVisible = true
     )
     private String email;
 

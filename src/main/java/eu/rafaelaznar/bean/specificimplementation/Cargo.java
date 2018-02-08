@@ -33,7 +33,8 @@ public class Cargo extends TableGenericBeanImplementation {
             IsRequired = true,
             IsForeignKeyDescriptor = false,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = true
     )
     private String cargo;
 
