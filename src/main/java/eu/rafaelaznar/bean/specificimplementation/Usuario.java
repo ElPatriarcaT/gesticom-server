@@ -62,9 +62,9 @@ public class Usuario extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.ForeignId
     )
     private Integer id_tipousuario;
-    @Expose(deserialize = false)
+    @Expose
     @MetaPropertyBeanInterface(
-            ShortName = "Tipo",
+            ShortName = "Tipo Usu.",
             LongName = "Tipo usuario",
             Description = "Tipo de usuario",
             Type = EnumHelper.FieldType.ForeignObject,
