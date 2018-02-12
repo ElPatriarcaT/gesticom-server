@@ -31,7 +31,7 @@ public class Recompensa extends TableGenericBeanImplementation {
             Description = "Descripcion de la Recompensa de los falleros",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100
     )

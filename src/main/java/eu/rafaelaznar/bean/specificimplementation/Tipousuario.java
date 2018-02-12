@@ -31,7 +31,7 @@ public class Tipousuario extends TableGenericBeanImplementation  {
             Description = "Descripcion del Tipo Usuario",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100
     )

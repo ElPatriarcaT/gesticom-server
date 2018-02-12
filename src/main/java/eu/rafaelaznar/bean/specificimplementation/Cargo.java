@@ -31,23 +31,23 @@ public class Cargo extends TableGenericBeanImplementation {
             Description = "Descripcion del Cargo de los falleros",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
-            MaxLength = 100,
-            IsVisible = true
+            MaxLength = 100
     )
-    private String cargo;
+    private String descripcion;
 
 
     public Cargo() {
     }
 
-
-    public String getCargo() {
-        return cargo;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
+
+
 }

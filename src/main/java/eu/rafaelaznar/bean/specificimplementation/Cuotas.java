@@ -6,19 +6,28 @@
 package eu.rafaelaznar.bean.specificimplementation;
 
 import eu.rafaelaznar.bean.genericimplementation.TableGenericBeanImplementation;
+import eu.rafaelaznar.bean.meta.publicinterface.MetaObjectBeanInterface;
+import eu.rafaelaznar.helper.EnumHelper;
 
 /**
  *
  * @author a023319520g
  */
+@MetaObjectBeanInterface(
+        TableName = "cuotas",
+        SingularDescription = "Cuota",
+        PluralDescription = "Cuotas",
+        Icon = "fa fa-",
+        Type = EnumHelper.SourceType.Table
+)
 public class Cuotas extends TableGenericBeanImplementation {
-
+    
     private Double cantidad_pt;
     private Double cantidad_st;
     private Double cantidad_tt;
     private Double cantidad_ct;
-    private Censo id_censo;
-    private Ejercicio id_ejercicio;
+    private Integer id_censo;
+    private Integer id_ejercicio;
 
     public Cuotas() {
     }
@@ -57,19 +66,19 @@ public class Cuotas extends TableGenericBeanImplementation {
 
     
 
-    public Censo getId_censo() {
+    public Integer getId_censo() {
         return id_censo;
     }
 
-    public void setId_censo(Censo id_censo) {
+    public void setId_censo(Integer id_censo) {
         this.id_censo = id_censo;
     }
 
-    public Ejercicio getId_ejercicio() {
+    public Integer getId_ejercicio() {
         return id_ejercicio;
     }
 
-    public void setId_ejercicio(Ejercicio id_ejercicio) {
+    public void setId_ejercicio(Integer id_ejercicio) {
         this.id_ejercicio = id_ejercicio;
     }
 

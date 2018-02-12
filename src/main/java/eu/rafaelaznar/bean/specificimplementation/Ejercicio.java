@@ -32,7 +32,7 @@ public class Ejercicio extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.Integer,
             RegexHelp = "Año Valido",
             IsRequired = false,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 4,
             MaxLength = 4,
             IsVisible = true

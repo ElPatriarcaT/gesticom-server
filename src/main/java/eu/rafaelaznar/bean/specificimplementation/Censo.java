@@ -22,7 +22,7 @@ import java.util.Date;
         TableName = "censo",
         SingularDescription = "Censo",
         PluralDescription = "Censo de la Asociación",
-        Icon = "fa fa-",
+        Icon = "far fa-address-card",
         Type = EnumHelper.SourceType.Table
 )
 public class Censo extends TableGenericBeanImplementation {
@@ -86,14 +86,15 @@ public class Censo extends TableGenericBeanImplementation {
     )
     private String domicilio;
     
-        @Expose
+    @Expose
     @MetaPropertyBeanInterface(
             ShortName = "Loc.",
             LongName = "Localidad",
             Description = "Localidad del paciente",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = false
     )
     private String localidad;
         
@@ -105,7 +106,7 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.Integer,
             Width = 3,
             MaxLength = 5,
-            IsVisible = true
+            IsVisible = false
     )
     private String cod_postal;
     
@@ -116,7 +117,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Teléfono del Usuario",
             Type = EnumHelper.FieldType.String,
             Width = 3,
-            MaxLength = 20
+            MaxLength = 20,
+            IsVisible = false
     )
     private String telefono;
     
@@ -126,7 +128,7 @@ public class Censo extends TableGenericBeanImplementation {
             LongName = "Fecha de nacimiento",
             Description = "Fecha de nacimiento del usuario",
             Type = EnumHelper.FieldType.Date,
-            IsVisible = true
+            IsVisible = false
     )
     private Date fecha_nacimiento;
     
@@ -135,7 +137,8 @@ public class Censo extends TableGenericBeanImplementation {
             ShortName = "F.alta",
             LongName = "Fecha de alta",
             Description = "Fecha de alta del usuario",
-            Type = EnumHelper.FieldType.Date
+            Type = EnumHelper.FieldType.Date,
+            IsVisible = false
     )
     private Date fecha_alta;
     
@@ -146,7 +149,8 @@ public class Censo extends TableGenericBeanImplementation {
             Description = "Edad del Usuario",
             Type = EnumHelper.FieldType.Integer,
             Width = 1,
-            MaxLength = 3
+            MaxLength = 3,
+            IsVisible = false
     )
     private String edad;
     
@@ -166,7 +170,7 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.ForeignId
     )
     private Integer id_cargo;
-     @Expose(serialize = false)
+     @Expose(deserialize = false)
     @MetaPropertyBeanInterface(
             ShortName = "Car.",
             LongName = "Cargo",
@@ -175,7 +179,7 @@ public class Censo extends TableGenericBeanImplementation {
             IsRequired = true,
             References = "cargo",
             Width = 4,
-            IsVisible = true
+            IsVisible = false
     )
     private MetaBeanHelper obj_cargo = null;
     
@@ -184,7 +188,7 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.ForeignId
     )
     private Integer id_recompensa;
-     @Expose(serialize = false)
+    @Expose(deserialize = false)
     @MetaPropertyBeanInterface(
             ShortName = "Rec.",
             LongName = "Recompensa",
@@ -201,7 +205,7 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.ForeignId
     )
     private Integer id_usuario;
-     @Expose(serialize = false)
+     @Expose(deserialize = false)
     @MetaPropertyBeanInterface(
             ShortName = "Usu.",
             LongName = "Usuario",

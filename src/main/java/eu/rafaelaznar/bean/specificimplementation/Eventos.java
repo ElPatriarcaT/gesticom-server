@@ -58,7 +58,7 @@ public class Eventos extends TableGenericBeanImplementation {
             Description = "Titulo del Evento",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100,
             IsVisible = true

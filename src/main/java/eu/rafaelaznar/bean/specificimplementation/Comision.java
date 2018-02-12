@@ -34,7 +34,7 @@ public class Comision extends TableGenericBeanImplementation {
             IsRequired = true,
             RegexPattern = RegexConstants.capitalizedName,
             RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100,
             IsVisible = true

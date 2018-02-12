@@ -45,7 +45,7 @@ public class Usuario extends TableGenericBeanImplementation {
             Description = "Login del usuario",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            IsForeignKeyDescriptor = false,
+            IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100
     )
