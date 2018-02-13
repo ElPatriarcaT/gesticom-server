@@ -54,6 +54,7 @@ public class DaoFactory {
                 break;
             case "cargo":
                 oDao = (MetaDaoInterface) new CargoSpecificDaoImplementation(oConnection, oPuserBean_security, strWhere);
+                break;
             case "comision":
                 oDao = (MetaDaoInterface) new ComisionSpecificDaoImplementation(oConnection, oPuserBean_security, strWhere);
                 break;
