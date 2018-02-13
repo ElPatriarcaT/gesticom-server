@@ -22,7 +22,7 @@ import java.util.Date;
         TableName = "censo",
         SingularDescription = "Censo",
         PluralDescription = "Censo de la Asociación",
-        Icon = "far fa-address-card",
+        Icon = "fa fa-address-card",
         Type = EnumHelper.SourceType.Table
 )
 public class Censo extends TableGenericBeanImplementation {
@@ -47,6 +47,7 @@ public class Censo extends TableGenericBeanImplementation {
             Type = EnumHelper.FieldType.String,
             Width = 3,
             MaxLength = 100,
+            IsForeignKeyDescriptor = true,
             IsVisible = true
     )
     private String nombre;

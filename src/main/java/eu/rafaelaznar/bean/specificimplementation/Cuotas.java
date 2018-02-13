@@ -17,7 +17,7 @@ import eu.rafaelaznar.helper.EnumHelper;
         TableName = "cuotas",
         SingularDescription = "Cuota",
         PluralDescription = "Cuotas",
-        Icon = "fa fa-",
+        Icon = "fa fa-chart-line",
         Type = EnumHelper.SourceType.Table
 )
 public class Cuotas extends TableGenericBeanImplementation {

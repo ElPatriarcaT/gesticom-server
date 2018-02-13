@@ -26,17 +26,22 @@ import eu.rafaelaznar.helper.constant.RegexConstants;
 )
 public class Usuario extends TableGenericBeanImplementation {
 
-    @Expose(deserialize = false)
+    
+    @Expose(serialize = false)
     @MetaPropertyBeanInterface(
-            ShortName = "ID Censo",
-            LongName = "ID del Censo",
-            Description = "ID correspondiente al Censo",
-            Type = EnumHelper.FieldType.ForeignId,
-            IsForeignKeyDescriptor = true,
-            Width = 3,
-            MaxLength = 100
+            Type = EnumHelper.FieldType.ForeignId
     )
     private Integer id_censo;
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Censo.",
+            LongName = "Id Censo",
+            Description = "Num. Correspondiente al Censo de la Asociación",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "censo"
+    )
+    private MetaBeanHelper obj_censo = null;
 
     @Expose
     @MetaPropertyBeanInterface(
@@ -121,4 +126,5 @@ public class Usuario extends TableGenericBeanImplementation {
         this.id_tipousuario = id_tipousuario;
     }
 
+  
 }

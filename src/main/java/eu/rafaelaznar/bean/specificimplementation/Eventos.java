@@ -20,7 +20,7 @@ import java.util.Date;
         TableName = "eventos",
         SingularDescription = "Eventos",
         PluralDescription = "Eventos de la Asociación",
-        Icon = "fa fa-",
+        Icon = "fa fa-calendar",
         Type = EnumHelper.SourceType.Table
 )
 public class Eventos extends TableGenericBeanImplementation {

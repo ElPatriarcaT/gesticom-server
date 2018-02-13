@@ -19,7 +19,7 @@ import eu.rafaelaznar.helper.EnumHelper;
         TableName = "tipousuario",
         SingularDescription = "Tipo Usu.",
         PluralDescription = "Tipo de Usuario",
-        Icon = "fa fa-",
+        Icon = "fa fa-user-o",
         Type = EnumHelper.SourceType.Table
 )
 public class Tipousuario extends TableGenericBeanImplementation  {

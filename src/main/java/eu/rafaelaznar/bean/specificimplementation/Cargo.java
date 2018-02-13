@@ -18,8 +18,8 @@ import eu.rafaelaznar.helper.EnumHelper;
 @MetaObjectBeanInterface(
         TableName = "cargo",
         SingularDescription = "Cargo",
-        PluralDescription = "Cargos",
-        Icon = "fa fa-",
+        PluralDescription = "Cargos de la Asociación",
+        Icon = "fa fa-list-alt",
         Type = EnumHelper.SourceType.Table
 )
 public class Cargo extends TableGenericBeanImplementation {

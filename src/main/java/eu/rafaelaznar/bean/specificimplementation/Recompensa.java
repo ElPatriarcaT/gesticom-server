@@ -19,7 +19,7 @@ import eu.rafaelaznar.helper.EnumHelper;
         TableName = "recompensa",
         SingularDescription = "Recompensa",
         PluralDescription = "Recompensas de la Asociación",
-        Icon = "fa fa-",
+        Icon = "fa fa-trophy",
         Type = EnumHelper.SourceType.Table
 )
 public class Recompensa extends TableGenericBeanImplementation {

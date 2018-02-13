@@ -20,7 +20,7 @@ import eu.rafaelaznar.helper.constant.RegexConstants;
         TableName = "comision",
         SingularDescription = "Comision",
         PluralDescription = "Comisión o Asociación",
-        Icon = "fa fa-",
+        Icon = "fa fa-building",
         Type = EnumHelper.SourceType.Table
 )
 public class Comision extends TableGenericBeanImplementation {

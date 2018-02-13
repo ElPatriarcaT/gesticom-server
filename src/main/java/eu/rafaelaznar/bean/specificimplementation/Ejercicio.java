@@ -19,7 +19,7 @@ import eu.rafaelaznar.helper.EnumHelper;
         TableName = "ejercicio",
         SingularDescription = "Ejer.",
         PluralDescription = "Ejercicio",
-        Icon = "fa fa-",
+        Icon = "fa fa-book",
         Type = EnumHelper.SourceType.Table
 )
 public class Ejercicio extends TableGenericBeanImplementation {
