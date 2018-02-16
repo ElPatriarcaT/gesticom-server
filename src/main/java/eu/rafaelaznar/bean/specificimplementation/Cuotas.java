@@ -5,9 +5,14 @@
  */
 package eu.rafaelaznar.bean.specificimplementation;
 
+import com.google.gson.annotations.Expose;
 import eu.rafaelaznar.bean.genericimplementation.TableGenericBeanImplementation;
+import eu.rafaelaznar.bean.helper.MetaBeanHelper;
 import eu.rafaelaznar.bean.meta.publicinterface.MetaObjectBeanInterface;
+import eu.rafaelaznar.bean.meta.publicinterface.MetaPropertyBeanInterface;
 import eu.rafaelaznar.helper.EnumHelper;
+import static eu.rafaelaznar.helper.EnumHelper.FieldType.Decimal;
+import eu.rafaelaznar.helper.constant.RegexConstants;
 
 /**
  *
@@ -22,12 +27,96 @@ import eu.rafaelaznar.helper.EnumHelper;
 )
 public class Cuotas extends TableGenericBeanImplementation {
     
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Cant. PT",
+            LongName = "Cantidad Primer Trimestre",
+            Description = "PCantidad Pagada en el Primer Trimestre",
+            Type = EnumHelper.FieldType.Decimal,
+            //RegexPattern = RegexConstants.,
+            //RegexHelp = RegexConstants.capitalizedName_Help,
+            MaxLength = 100,
+            IsVisible = true
+    )
     private Double cantidad_pt;
+    
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Cant. ST",
+            LongName = "Cantidad Segundo Trimestre",
+            Description = "PCantidad Pagada en el Segundo Trimestre",
+            Type = EnumHelper.FieldType.Decimal,
+            //RegexPattern = RegexConstants.,
+            //RegexHelp = RegexConstants.capitalizedName_Help,
+            MaxLength = 100,
+            IsVisible = true
+    )
     private Double cantidad_st;
+    
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Cant. TT",
+            LongName = "Cantidad Tercer Trimestre",
+            Description = "PCantidad Pagada en el Tercer Trimestre",
+            Type = EnumHelper.FieldType.Decimal,
+            //RegexPattern = RegexConstants.,
+            //RegexHelp = RegexConstants.capitalizedName_Help,
+            MaxLength = 100,
+            IsVisible = true
+    )
     private Double cantidad_tt;
+    
+    @Expose
+    @MetaPropertyBeanInterface(
+            ShortName = "Cant. CT",
+            LongName = "Cantidad Cuarto Trimestre",
+            Description = "PCantidad Pagada en el Cuarto Trimestre",
+            Type = EnumHelper.FieldType.Decimal,
+            //RegexPattern = RegexConstants.,
+            //RegexHelp = RegexConstants.capitalizedName_Help,
+            MaxLength = 100,
+            IsVisible = true
+    )
     private Double cantidad_ct;
+    
+    @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            Type = EnumHelper.FieldType.ForeignId
+    )
     private Integer id_censo;
+     @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Cen.",
+            LongName = "Censo",
+            Description = "Datos del Censo",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "censo",
+            Width = 4,
+            IsVisible = true
+    )
+    private MetaBeanHelper obj_censo = null;
+    
+     @Expose(serialize = false)
+    @MetaPropertyBeanInterface(
+            Type = EnumHelper.FieldType.ForeignId
+    )
     private Integer id_ejercicio;
+      @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Eje.",
+            LongName = "Ejercicio",
+            Description = "Datos del Ejercicio",
+            Type = EnumHelper.FieldType.ForeignObject,
+            IsRequired = true,
+            References = "ejercicio",
+            Width = 4,
+            IsVisible = true
+    )
+    private MetaBeanHelper obj_ejercicio = null;
+      
+    
+    
 
     public Cuotas() {
     }

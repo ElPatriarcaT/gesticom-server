@@ -52,7 +52,8 @@ public class EnumHelper {
         Link,
         Calculated,
         Password,
-        Token
+        Token,
+        Double
     };
 
     public static enum SourceType {
